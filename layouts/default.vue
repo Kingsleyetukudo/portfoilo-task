@@ -3,17 +3,21 @@
     <nav class="flex justify-between items-center">
       <img src="../images/logo.jpg" alt="logo" class="w-20" />
       <ul class="flex gap-4 border p-4">
-        <li>Home</li>
+        <li v-if="isActive">Home</li>
         <li>About</li>
         <li>Contact</li>
+
+        {{
+          name
+        }}
       </ul>
 
       <div>
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
-          <i class="material-icons"> nightlight_round </i>
-          <i class="material-icons"> light_mode </i>
-          <div class="ball"></div>
+          <i class="material-icons text-yellow-600"> nightlight_round </i>
+          <i class="material-icons text-yellow-400"> light_mode </i>
+          <div class="ball" @click="handleToggle()"></div>
         </label>
       </div>
     </nav>
@@ -24,63 +28,21 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const name = ref("kingsley");
+const isActive = ref(false);
 
-<style scoped>
-body {
-  background-color: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  transition: background 0.2s linear;
-}
+const handleToggle = () => {
+  name.value = "etukudo";
+  isActive.value = true;
+  console.log("clicked");
+  let body = document.body;
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+  } else {
+    body.classList.add("dark");
+  }
+};
+</script>
 
-body.dark {
-  background: #292c35;
-}
-
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
-
-.label {
-  background-color: #111;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  position: relative;
-  height: 26px;
-  width: 50px;
-  transform: scale(1.5);
-}
-
-.label .ball {
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 22px;
-  width: 22px;
-  transform: translateX(0px);
-  transition: transform 0.2s linear;
-}
-
-.checkbox:checked + .label .ball {
-  transform: translateX(24px);
-}
-
-.fa-moon {
-  color: #f1c40f;
-}
-
-.fa-sun {
-  color: #f39c12;
-}
-</style>
+<style scoped></style>
