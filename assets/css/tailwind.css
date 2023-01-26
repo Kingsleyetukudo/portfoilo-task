@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-[#fafafa] transition bg-inherit delay-1000 ease-linear;
+  @apply bg-[#fafafa] transition bg-inherit delay-75 ease-linear;
 }
 
 @layer components {
@@ -22,9 +20,17 @@ body {
   }
 
   body.dark {
-    @apply bg-[#292c35];
+    @apply bg-[#292c35] text-white;
   }
   .checkbox:checked + .label .ball {
     @apply translate-x-8;
+  }
+
+  .btn {
+    @apply bg-[#00BD95];
+  }
+
+  .search-box {
+    @apply bg-[#21272F];
   }
 }
