@@ -20,7 +20,7 @@ body {
   }
 
   body.dark {
-    @apply bg-[#292c35] text-white;
+    @apply bg-[#21272F] text-white;
   }
   .checkbox:checked + .label .ball {
     @apply translate-x-8;
@@ -28,9 +28,5 @@ body {
 
   .btn {
     @apply bg-[#00BD95];
-  }
-
-  .search-box {
-    @apply bg-[#21272F];
   }
 }
