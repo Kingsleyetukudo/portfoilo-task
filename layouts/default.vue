@@ -7,9 +7,17 @@
           alt="profile-logo"
           class="w-20" />
       </div>
-      <ul class="flex gap-6 p-4">
-        <li>Home</li>
-        <li>Projects</li>
+      <ul class="flex gap-6 p-4 text-xl">
+        <li class="">
+          <a
+            href="@"
+            class="inline-block after:block after:h-1 after:bg-blue-900 after:m-auto after:w-0 after:transition after:duration-75 hover:after:w-full">
+            Home
+          </a>
+        </li>
+        <li class="hover:text-white transition ease-out duration-500">
+          Projects
+        </li>
         <li>About</li>
         <li>Contact</li>
       </ul>
