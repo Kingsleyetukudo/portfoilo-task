@@ -25,7 +25,12 @@ body {
   .checkbox:checked + .label .ball {
     @apply translate-x-8;
   }
-
+  .menuTrans {
+    @apply inline-block after:block after:h-1 after:bg-blue-900 after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;
+  }
+  .menuDark {
+    @apply inline-block after:block after:h-1 after:bg-[#00BD95] after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;
+  }
   .btn {
     @apply bg-[#00BD95];
   }

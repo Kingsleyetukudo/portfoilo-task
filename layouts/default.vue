@@ -8,18 +8,10 @@
           class="w-20" />
       </div>
       <ul class="flex gap-6 p-4 text-xl">
-        <li class="">
-          <a
-            href="@"
-            class="inline-block after:block after:h-1 after:bg-blue-900 after:m-auto after:w-0 after:transition after:duration-75 hover:after:w-full">
-            Home
-          </a>
-        </li>
-        <li class="hover:text-white transition ease-out duration-500">
-          Projects
-        </li>
-        <li>About</li>
-        <li>Contact</li>
+        <li class="menuTrans" ref="changeColor1">Home</li>
+        <li class="menuTrans" ref="changeColor2">Projects</li>
+        <li class="menuTrans" ref="changeColor3">About</li>
+        <li class="menuTrans" ref="changeColor4">Contact</li>
       </ul>
 
       <div class="flex flex-col gap-4">
@@ -57,14 +49,38 @@
 <script setup>
 const name = ref("kingsley");
 const isActive = ref(false);
+const changeColor1 = ref(null);
+const changeColor2 = ref(null);
+const changeColor3 = ref(null);
+const changeColor4 = ref(null);
+
+onMounted(() => {
+  console.log(changeColor);
+});
 
 const handleToggle = () => {
   let body = document.body;
-  if (body.classList.contains("dark")) {
+  if (
+    body.classList.contains("dark") &&
+    changeColor1.value.classList.contains("menuDark") &&
+    changeColor2.value.classList.contains("menuDark") &&
+    changeColor3.value.classList.contains("menuDark") &&
+    changeColor4.value.classList.contains("menuDark")
+  ) {
     body.classList.remove("dark");
+    changeColor1.value.classList.remove("menuDark");
+    changeColor2.value.classList.remove("menuDark");
+    changeColor3.value.classList.remove("menuDark");
+    changeColor4.value.classList.remove("menuDark");
   } else {
     body.classList.add("dark");
+    changeColor1.value.classList.add("menuDark");
+    changeColor2.value.classList.add("menuDark");
+    changeColor3.value.classList.add("menuDark");
+    changeColor4.value.classList.add("menuDark");
   }
+
+  changeColor.classList;
 };
 const handleDarkMode = () => {
   let body = document.body;
@@ -72,7 +88,11 @@ const handleDarkMode = () => {
 };
 const handleLightMode = () => {
   let body = document.body;
-  body.classList.add("dark");
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+  } else {
+    body.classList.add("dark");
+  }
 };
 </script>
 
