@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#fafafa] transition bg-inherit delay-75 ease-linear;
+  @apply bg-[#ddd] transition-all delay-75 ease-linear;
 }
 
 @layer components {
@@ -29,9 +29,16 @@ body {
     @apply inline-block after:block after:h-1 after:bg-blue-900 after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;
   }
   .menuDark {
-    @apply inline-block after:block after:h-1 after:bg-[#00BD95] after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;
+    @apply inline-block hover:text-[#00bd95] after:block after:h-1 after:bg-[#00BD95] after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;
+  }
+
+  .search-box {
+    @apply flex items-center border-solid border-2 border-gray-900;
   }
   .btn {
     @apply bg-[#00BD95];
+  }
+  .darkLine {
+    @apply border-solid border-2 border-[#00bd95];
   }
 }
