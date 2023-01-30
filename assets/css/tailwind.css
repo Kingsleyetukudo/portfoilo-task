@@ -36,7 +36,7 @@ body {
     @apply flex items-center border-solid border-2 border-gray-900;
   }
   .btn {
-    @apply bg-[#00BD95];
+    @apply bg-[#00BF95];
   }
   .darkLine {
     @apply border-solid border-2 border-[#00bd95];
