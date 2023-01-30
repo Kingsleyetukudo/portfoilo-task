@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto border font-bodyFont flex flex-col p-4 pt-7">
+  <div class="container mx-auto font-bodyFont flex flex-col p-4 pt-7">
     <div class="self-end">
       <input type="checkbox" class="checkbox" id="chk" />
       <label class="label" for="chk">
@@ -20,9 +20,12 @@
           class="w-20" />
       </div>
       <ul class="flex gap-6 p-4 text-xl">
+        <NuxtLink to="/about" class="menuTrans" ref="changeColor3"
+          >About</NuxtLink
+        >
         <li class="menuTrans" ref="changeColor1">Home</li>
         <li class="menuTrans" ref="changeColor2">Projects</li>
-        <li class="menuTrans" ref="changeColor3">About</li>
+        <!-- <li class="menuTrans" ref="changeColor3">About</li> -->
         <li class="menuTrans" ref="changeColor4">Contact</li>
       </ul>
 
