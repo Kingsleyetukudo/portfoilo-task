@@ -22,9 +22,14 @@
           <p>Check out my:</p>
         </div>
       </div>
-      <div class="border relative">
-        <div class="hexagon">
-          <img src="../images/kingsley-pic.png" alt="" />
+      <div class="border flex items-center justify-center w-full">
+        <div class="border-gray-900 border">
+          <div class="profileImage">
+            <img
+              src="../images/kingsley-pic.png"
+              alt=""
+              class="absolute top-[-100px]" />
+          </div>
         </div>
       </div>
     </div>
@@ -33,34 +38,4 @@
 
 <script setup></script>
 
-<style scoped>
-.hexagon {
-  width: 50%;
-  height: 50%;
-  background: orange;
-  position: relative;
-}
-
-.hexagon:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 25px solid orange;
-}
-.hexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  width: 50%;
-  height: 50;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid orange;
-}
-</style>
+<style scoped></style>
