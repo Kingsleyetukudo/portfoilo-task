@@ -22,15 +22,11 @@
           <p>Check out my:</p>
         </div>
       </div>
-      <div class="border flex items-center justify-center w-full">
-        <div class="border-gray-900 border">
-          <div class="profileImage">
-            <img
-              src="../images/kingsley-pic.png"
-              alt=""
-              class="absolute top-[-100px]" />
-          </div>
+      <div class="border flex items-center justify-center w-full relative">
+        <div class="profileImage absolute -z-10">
+          <img src="../images/kingsley-pic.png" alt="" />
         </div>
+        <div class="border w-80 h-80 border-gray-900"></div>
       </div>
     </div>
   </div>
@@ -38,4 +34,11 @@
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.profileImage {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: aqua;
+  width: 450px;
+  height: 450px;
+}
+</style>
