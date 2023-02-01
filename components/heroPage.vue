@@ -22,11 +22,11 @@
           <p>Check out my:</p>
         </div>
       </div>
-      <div class="border flex items-center justify-center w-full relative">
-        <div class="profileImage absolute -z-10">
-          <img src="../images/kingsley-pic.png" alt="" />
-        </div>
-        <div class="border w-80 h-80 border-gray-900"></div>
+      <div class="border border-gray-800 w-full relative">
+        <div
+          class="profileImage absolute animate-wiggle border border-gray-700"></div>
+        <!-- <img src="../images/kingsley-pic.png" alt="" />
+        <div class="border w-80 h-80 border-gray-900"></div> -->
       </div>
     </div>
   </div>
@@ -36,9 +36,9 @@
 
 <style scoped>
 .profileImage {
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  border-radius: 30% 70% 70% 30% / 21% 40% 60% 79%;
   background-color: aqua;
-  width: 450px;
-  height: 450px;
+  width: 50px;
+  height: 50px;
 }
 </style>
