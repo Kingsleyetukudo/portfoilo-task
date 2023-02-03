@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="md:grid md:grid-cols-2">
-      <div class="border flex flex-col justify-center items-start">
-        <p class="text-xl font-medium py-4">
+      <div class="flex flex-col justify-center items-start">
+        <p class="text-xl font-medium py-4 md:mt-20">
           Hello, <span class="text-primary">I'm</span>
         </p>
         <h1 class="text-6xl font-bold text-primary">Kingsley Etukudo</h1>
@@ -18,15 +18,20 @@
           Let's Talk
         </button>
 
-        <div>
+        <div class="mt-auto">
           <p>Check out my:</p>
         </div>
       </div>
-      <div class="border border-gray-800 w-full relative">
+      <div class="w-full relative flex items-centers justify-center">
         <div
-          class="profileImage absolute animate-wiggle border border-gray-700"></div>
-        <!-- <img src="../images/kingsley-pic.png" alt="" />
-        <div class="border w-80 h-80 border-gray-900"></div> -->
+          class="profileImage animate-leftMove border border-gray-700 absolute"></div>
+        <div
+          class="profileImage animate-rightMove border border-gray-700 absolute"></div>
+        <div
+          class="profileImage animate-bottomMove border border-gray-700 absolute"></div>
+        <div
+          class="profileImage animate-topMove border border-gray-700 absolute"></div>
+        <img src="../images/kingsley-pic.png" alt="" class="z-10" />
       </div>
     </div>
   </div>

@@ -13,13 +13,41 @@ module.exports = {
       },
 
       animation: {
-        wiggle: "wiggle 10s infinite",
+        leftMove: "leftMove ease-in-out 15s infinite",
+        rightMove: "rightMove ease-in-out 15s infinite",
+        bottomMove: "bottomMove ease-in-out 15s infinite",
+        topMove: "topMove ease-in-out 15s infinite",
       },
 
       keyframes: {
-        wiggle: {
-          0: { left: "0", top: "0" },
-          "25%": { left: "300px", top: "0" },
+        leftMove: {
+          "0%": { left: "0px", top: "0px" },
+          "25%": { left: "90%", top: "0" },
+          "50%": { left: "200px", top: "200px" },
+          "75%": { left: "0px", top: "90%" },
+          "100%": { left: "0px", top: "0px" },
+        },
+        rightMove: {
+          "0%": { right: "0px", top: "0px" },
+          "25%": { right: "90%", top: "0" },
+          "50%": { right: "200px", top: "200px" },
+          "75%": { right: "0px", top: "90%" },
+          "100%": { right: "0px", top: "0px" },
+        },
+
+        bottomMove: {
+          "0%": { right: "0px", bottom: "0px" },
+          "25%": { right: "90%", bottom: "0" },
+          "50%": { right: "200px", bottom: "200px" },
+          "75%": { right: "0px", bottom: "90%" },
+          "100%": { right: "0px", bottom: "0px" },
+        },
+        topMove: {
+          "0%": { left: "0px", bottom: "0px" },
+          "25%": { left: "90%", bottom: "0" },
+          "50%": { left: "200px", bottom: "200px" },
+          "75%": { left: "0px", bottom: "90%" },
+          "100%": { left: "0px", bottom: "0px" },
         },
       },
     },

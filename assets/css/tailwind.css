@@ -26,7 +26,7 @@ body {
     @apply translate-x-8;
   }
   .menuTrans {
-    @apply inline-block after:block after:h-1 after:bg-blue-900 after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;
+    @apply inline-block after:block after:h-1 after:bg-blue-900 after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full hover:text-blue-900 hover:text-xl;
   }
   .menuDark {
     @apply inline-block hover:text-[#00bd95] after:block after:h-1 after:bg-[#00BD95] after:m-auto after:w-0 after:transition-all duration-75 hover:after:w-full;

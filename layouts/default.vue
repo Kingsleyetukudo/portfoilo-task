@@ -12,7 +12,7 @@
         <div class="ball" @click="handleToggle()"></div>
       </label>
     </div>
-    <nav class="flex justify-between items-center pt-7">
+    <nav class="md:flex justify-between items-center pt-7">
       <div class="profile flex items-center">
         <img
           src="../images/kingsley-logo.png"
@@ -20,13 +20,14 @@
           class="w-20" />
       </div>
       <ul class="flex gap-6 p-4 text-xl">
-        <NuxtLink to="/about" class="menuTrans" ref="changeColor3"
+        <NuxtLink to="/" class="menuDark" ref="changeColor3">Home</NuxtLink>
+        <NuxtLink to="/about" class="menuDark" ref="changeColor3"
           >About</NuxtLink
         >
-        <li class="menuTrans" ref="changeColor1">Home</li>
-        <li class="menuTrans" ref="changeColor2">Projects</li>
+
+        <li class="menuDark" ref="changeColor2">Projects</li>
         <!-- <li class="menuTrans" ref="changeColor3">About</li> -->
-        <li class="menuTrans" ref="changeColor4">Contact</li>
+        <li class="menuDark" ref="changeColor4">Contact</li>
       </ul>
 
       <div class="flex flex-col gap-4">
@@ -60,37 +61,31 @@ const handleToggle = () => {
   let body = document.body;
   if (
     body.classList.contains("dark") &&
-    changeColor1.value.classList.contains("menuDark") &&
-    changeColor2.value.classList.contains("menuDark") &&
-    changeColor3.value.classList.contains("menuDark") &&
-    changeColor4.value.classList.contains("menuDark") &&
     borderLine.value.classList.contains("darkLine")
   ) {
     body.classList.remove("dark");
-    changeColor1.value.classList.remove("menuDark");
-    changeColor2.value.classList.remove("menuDark");
-    changeColor3.value.classList.remove("menuDark");
-    changeColor4.value.classList.remove("menuDark");
     borderLine.value.classList.remove("darkLine");
   } else {
     body.classList.add("dark");
-    changeColor1.value.classList.add("menuDark");
-    changeColor2.value.classList.add("menuDark");
-    changeColor3.value.classList.add("menuDark");
-    changeColor4.value.classList.add("menuDark");
     borderLine.value.classList.add("darkLine");
   }
 };
 const handleDarkMode = () => {
   let body = document.body;
   body.classList.remove("dark");
+  borderLine.value.classList.remove("darkLine");
 };
 const handleLightMode = () => {
   let body = document.body;
-  if (body.classList.contains("dark")) {
+  if (
+    body.classList.contains("dark") &&
+    borderLine.value.classList.contains("darkLine")
+  ) {
     body.classList.remove("dark");
+    borderLine.value.classList.remove("darkLine");
   } else {
     body.classList.add("dark");
+    borderLine.value.classList.add("darkLine");
   }
 };
 </script>
